@@ -17,7 +17,7 @@
 # University. All Rights Reserved.
 #
 MPIHOME=/usr
-PARMETISHOME=/home/suntans/code/ParMetis-3.2.0
-TRIANGLEHOME=
+PARMETISHOME=$(HOME)/waves/ParMetis-3.2.0
+TRIANGLEHOME=/usr
 NETCDF4HOME=/usr
 
