@@ -24,8 +24,9 @@ else
 endif
 #OPTFLAGS = -O2 -xCORE-AVX2
 #OPTFLAGS = -O2 -ipo
-OPTFLAGS = -O2
-#OPTFLAGS = -O2 -mavx -xHost -static 
+#OPTFLAGS = -O2
+OPTFLAGS = -O2 -mavx
+# -xHost -static 
 #OPTFLAGS = -O0 -g 
 #
 #DDTOPTS =  -L/pawsey/cle52up04/devel/binary/forge/7.0.4/lib/64 -lmap-sampler-pmpi -lmap-sampler -ldmalloc -Wl,--allow-multiple-definition
@@ -86,7 +87,7 @@ LIBDIR = $(PARMETISLIBDIR) $(TRIANGLELIBDIR) $(NETCDFLIBDIR)
 LDFLAGS = -lm $(LIBDIR) $(LIBS) $(DDTOPTS)
 INCLUDES = $(PARMETISINCLUDE) $(TRIANGLEINCLUDE) $(NETCDFINCLUDE) 
 DEFINES = $(MPIDEF) $(NETCDFDEF)
-CFLAGS = $(OPTFLAGS) $(INCLUDES) $(DEFINES) 
+CFLAGS = $(OPTFLAGS) $(INCLUDES) $(DEFINES) -fcommon
 
 EXEC = sun
 PEXEC = sunplot
